@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+
+.task-app{
+    width: 100%;
+    max-width: 540px;
+    background: #beb2b2;
+    margin:150px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 30px #817c7c;
+
+}
+
+h2{
+    color:#267c2d;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    font-size: 30px;
+    position: relative;
+}
+
+.task-app h2 img{
+    position: absolute;
+    right: 0;
+    width: 40px;
+    margin-left: 20px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #c2b6b6;
+    border: none;
+    outline: 3px groove #000;
+    outline-offset: 3px;
+    border-radius: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0px 0px 10px #424040;
+}
+
+.row input{
+    flex: 1; 
+    border:none ;
+    outline: none;
+    padding: 10px;
+    background: transparent;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.row input::placeholder{
+    color: #94928d;
+}
+
+.row button{
+    border: none;
+    outline: none;
+    padding: 16px 30px;
+    background: #47464b;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 30px;
+    margin: 1px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    margin-block: 10px;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top:12px;
+    left: 8px;
+}
+
+ul li.checked{
+    background: #5d8a59;
+    color: #000000;
+    border-radius: 50px;
+}
+
+ul li.checked::before{
+    background: url(images/checked.png);
+    background-size: cover;
+}
+
+ul li span{                                                                                                                       
+    position: absolute;
+    top: 10px;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+    color: #c42626b9;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li.checked span{
+    color: #ffffff;
+}
+
+ul li.checked span:hover{
+    background: #574c4c;
+    color: #000000;
+}
+
+ul li span:hover{
+    background: #ff0000;
+    color: #fff;
+}
+
+@media screen and (max-width: 600px)
+{
+    .task-app{
+        margin:80px auto 10px;
+        padding: 20px 15px 45px;
+        border-radius: 25px;    
+    }
+            
+    .row{
+        border-radius: 29px;
+    }
+    
+    .row input{
+        padding: 0px;
+        font-weight: 500;
+        letter-spacing: 3px;
+    }
+    
+    .row button{
+        letter-spacing: 2px;
+    }
+}
